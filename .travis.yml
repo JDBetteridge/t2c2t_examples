@@ -16,7 +16,7 @@ deploy:
   provider: pages
   repo: JDBetteridge/T2C2T_examples
   target-branch: gh-pages
-  local-dir: gh-pages/html
+  local-dir: html
   github_token: $GITHUB_TOKEN
   skip-cleanup: true
   on:

@@ -10,7 +10,7 @@ nodes = 2
 fig, ax = plt.subplots(1, 1)
 x = np.linspace(0, 1, 1000)
 y = amplitude*np.sin((nodes + 1)*np.pi*x)
-sline, = ax.plot(x, y, lw=2)
+sline, = ax.plot(x, y)
 
 # Animation update function
 # This is called for each frame of the animation

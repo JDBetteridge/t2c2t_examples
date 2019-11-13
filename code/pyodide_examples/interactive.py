@@ -24,7 +24,7 @@ omega_ax = plt.axes([0.1, 0.05, 0.75, 0.02], facecolor=axcolor)
 
 alpha_slider = Slider(alpha_ax, r'$\alpha$', valmin=0, valmax=2, valinit=α, valstep=0.1)
 omega_slider = Slider(omega_ax, r'$\omega$', valmin=-10, valmax=+10, valinit=ω, valstep=0.1)
-    
+
 # Define an update function for when values change
 def update(val):
     α = alpha_slider.val

@@ -12,6 +12,10 @@ fig, ax = plt.subplots(1, 1)
 x = np.linspace(0, 1, 1000)
 y = amplitude*np.sin((nodes + 1)*np.pi*x)
 sline, = ax.plot(x, y, lw=2)
+
+ax.set_xlabel('$x$')
+ax.set_ylabel('$f$')
+ax.set_title(r"Standing wave with interior {} node(s), amplitude = {}".format(nodes, amplitude))
 ax.set_ylim(-2, 2)
 
 # Adjust plot to make room and add sliders
@@ -35,6 +39,7 @@ node_slider = Slider(node_ax, 'Nodes',
 def update(t):
     amplitude = amp_slider.val
     nodes = node_slider.val
+    ax.set_title(r"Standing wave with interior {} node(s), amplitude = {}".format(nodes, amplitude))
     x = np.linspace(0, 1, 1000)
     y = amplitude*np.cos(2*np.pi*t)*np.sin((nodes + 1)*np.pi*x)
     sline.set_data(x, y)
